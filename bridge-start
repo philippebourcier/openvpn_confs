@@ -22,6 +22,8 @@ eval $( ifdata -p $eth | awk '{ print "eth_ip=\"" $1 "\"\neth_netmask=\"" $2 "\"
 if [ "$eth_ip" = "NON-IP" ]; then
         exit 1
 fi
+# default route
+eval $( ip route get 1.1.1.1 | grep via | awk '{ print "defaultroute=\"" $3 "\"" }' )
 pkill -f dhclient
 
 for t in $tap; do
@@ -42,3 +44,5 @@ done
 ifconfig $eth 0.0.0.0 promisc up
 
 ifconfig $br $eth_ip netmask $eth_netmask broadcast $eth_broadcast
+
+ip route add default via $defaultroute
