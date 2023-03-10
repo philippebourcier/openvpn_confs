@@ -23,6 +23,9 @@ Don't forget to put the script there :
 mkdir -p /etc/openvpn/server/scripts
 wget https://raw.githubusercontent.com/philippebourcier/openvpn_confs/main/bridge-start
 chmod 755 bridge-start
+apt install bridge-utils moreutils net-tools
+vi bridge-start # check if your interface is eth0 or something else and modify accordingly...
+./bridge-start # TEST... if it fails, chances you'll have to reboot :)
 ```
 
 * Getting things ready for first launch
