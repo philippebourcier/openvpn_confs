@@ -1,0 +1,10 @@
+set_var EASYRSA_REQ_COUNTRY     "FR"
+set_var EASYRSA_REQ_PROVINCE    "IDF"
+set_var EASYRSA_REQ_CITY        "Paris"
+set_var EASYRSA_REQ_ORG         "Me"
+set_var EASYRSA_REQ_EMAIL       "noreply@example.com"
+set_var EASYRSA_REQ_OU          "VPN"
+set_var EASYRSA_BATCH           "1"
+set_var EASYRSA_CA_EXPIRE      3650
+set_var EASYRSA_CERT_EXPIRE    3650
+set_var EASYRSA_CRL_DAYS       3650
