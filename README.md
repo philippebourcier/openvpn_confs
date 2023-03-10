@@ -8,6 +8,7 @@ As root :
 ```apt install openvpn easy-rsa```
 
 * We need to modify the systemctl startup script
+
 Update /usr/lib/systemd/system/openvpn-server@.service
 
 ```
@@ -29,6 +30,7 @@ vi bridge-start # check if your interface is eth0 or something else and modify a
 ```
 
 * Getting things ready for first launch
+
 Update /etc/default/openvpn with
 
 ```AUTOSTART="server"```
