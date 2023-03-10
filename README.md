@@ -41,6 +41,7 @@ Enable openvpn at startup :
 cd /etc/openvpn/server
 wget https://raw.githubusercontent.com/philippebourcier/openvpn_confs/main/server.conf
 vi server.conf # edit the params that needs to be changed...
+systemctl daemon-reload 
 systemctl enable openvpn-server@server.service
 systemctl enable openvpn
 ```
